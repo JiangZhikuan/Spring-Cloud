@@ -16,6 +16,8 @@
 
   <modules>
     <module>cloud-provider-payment8001</module>
+      <module>untitled</module>
+    <module>cloud-consumer-order80</module>
   </modules>
 
   <properties>
