@@ -1,0 +1,12 @@
+server:
+  port: 2223
+spring:
+  application:
+    name: hello-service
+eureka:
+  client:
+    register-with-eureka: true
+      #集群节点下需要设置为true，才能配合客户端使用Ribbon 负载均衡
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:2222/eureka/
