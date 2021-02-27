@@ -7,17 +7,17 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * ClassName:ApplicationContextConfig
- * Package:org.jzk.springcloud.config
+ * Package:com.jzk.springcloud.config
  * Description:
  *
- * @Date:2021/2/24 21:41
- * @Author:JZK
+ * @Date:2021/2/26 13:23
+ * @Author:JIANGZHIKUAN
  */
 @Configuration
 public class ApplicationContextConfig {
 
     @Bean
-//    @LoadBalanced
+    @LoadBalanced
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
