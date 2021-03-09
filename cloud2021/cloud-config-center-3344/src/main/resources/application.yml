@@ -1,0 +1,21 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: spring-cloud-config
+          uri: git@github.com:JiangZhikuan/spring-cloud-config.git
+      #          uri: https://github.com/JiangZhikuan/spring-cloud-config.git
+#          username:
+#          password:
+#          skip-ssl-validation: true
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
