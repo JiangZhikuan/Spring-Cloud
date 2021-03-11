@@ -14,8 +14,19 @@ spring:
 #          password:
 #          skip-ssl-validation: true
       label: master
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 5672
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
