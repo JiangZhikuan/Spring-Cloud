@@ -82,4 +82,9 @@ public class OrderController {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(instance.getUri() + "/payment/lb", String.class);
         return responseEntity.getBody();
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String getPaymentZipkin() {
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/zipkin", String.class);
+    }
 }
